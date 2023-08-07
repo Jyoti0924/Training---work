@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+
+<body>
+    <script>
+        //SIMPLE SWITCH WITH CASES
+
+        // let choice = prompt("Enter your choice");
+        // switch(choice){
+        // case '1':
+        //     document.write("apple");
+        //     break;
+        // case '2': 
+        //     document.write("mango");
+        //     break;
+        // case '3': 
+        //     document.write("grapes");
+        //     break;
+        // case '4':
+        //     document.write ("strawberry");
+        //     break;
+        // case '5':
+        //     document.write("watermelon");
+        //     break;
+        // default:
+        //     document.write("Sorry this fruit is not available");
+        // }
+
+        //DATE METHODS WITH SWITCH
+
+        let day = prompt("Enter choice");
+        switch (new Date(day).getDay()) {
+            case 0:
+                document.write('Sunday')
+                break;
+            case 1:
+                document.write('Monday');
+                break;
+            case 2:
+                document.write("Tuesday");
+                break;
+            case 3:
+                document.write("Wednesday");
+                break;
+            case 4:
+                document.write("Thursday");
+                break;
+            case 5:
+                document.write("Friday");
+                break;
+            case 6:
+                document.write("saturday");
+                break;
+            default:
+                document.write("Sorry this day is not available");
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
