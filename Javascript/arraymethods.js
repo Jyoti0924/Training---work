@@ -36,7 +36,7 @@ let j =  ["1","2","3"]
 delete j[j.length-1]//delete is a keyword here
 console.log(j)//to remove element from last without any method
 
-let k = ["j","o","t","t"];
+let k = ["j","o","t","t"];//
 let l = ["D","h","i","m","a","n"];
 console.log(k.concat(l));//it will concat the elements
 
