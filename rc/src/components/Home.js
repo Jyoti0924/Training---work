@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+const eye = <FontAwesomeIcon icon={faEye} />;
 const Home = () => {
   const [state, setState] = useState({
     firstname: "",
@@ -18,7 +20,7 @@ const Home = () => {
     }));
   };
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,6 +33,12 @@ const Home = () => {
     });
   };
 
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePasswordVisiblity = () => {
+    setPasswordShown(passwordShown ? false : true);
+  };
+  
+ 
   return (
     <div className='form'>
       <form onSubmit={handleSubmit}>
@@ -64,13 +72,26 @@ const Home = () => {
           autoComplete='off'
           placeholder='Enter your gmail'
         />
+        <label className='fname'>Enter Password</label>
+        <input
+          className='ip'
+          type={passwordShown ? "password" : "text"}
+          name="password"
+          value={state.password}
+          onChange={handleChange}
+          autoComplete='off'
+          placeholder='Enter your password'
+        />
+        <i onClick={togglePasswordVisiblity}>{eye}</i>{" "}
         <div>
           <button type='submit' className='bname'>submit</button>
         </div>
       </form>
       {show ? <h3>{state.firstname}, {state.lastname}, {state.email}</h3> : ''}
-    </div>
-  );
-};
+   
+      
+  </div>
+  )
+}
 
 export default Home;

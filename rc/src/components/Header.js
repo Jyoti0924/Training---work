@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+const id = 123;
   return (
     <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
@@ -16,10 +17,10 @@ const Header = () => {
             <Link class="nav-link active" aria-current="page" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <Link class="nav-link" to="/about">About</Link>
+            <Link class="nav-link" to='/about'>About</Link>
           </li>
           <li className="nav-item">
-            <Link class="nav-link" to="/contact">Contact</Link>
+            <Link class="nav-link" to={`/contact/${id}`}>Contact</Link>
           </li>
           
         </ul>
